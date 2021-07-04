@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <main class="title center">
+            <h2>{{text1}}</h2>
+            <h4>{{text2}}</h4>
+            <p>{{text3}}</p>
+            <img src="https://via.placeholder.com/300x150" alt="img1">
+            <p>{{text4}}</p>
+            <p>{{text5}}</p>
+            <div class="goods-list">
+                <template v-for='good in goods'>
+                    <div class="goods-item">
+                        <img src="https://wallytally.ru/upload/iblock/de1/de1fa37da355f7697215a9ee38accaa6.jpg"
+                            width="200" height="300" alt="">
+                        <h2>{{good.name}}</h2>
+                        <p><b>{{good.price}} ₽</b></p>
+                        <button class="addBtn" v-on:click='getForm'>Купить</button>
+                    </div>
+                </template>
+            </div>
+            <p>{{text6}}</p>
+            <img src="https://via.placeholder.com/300x150" alt="img2">
+            <ul v-for="item in list1">
+                <li>{{item}}</li>
+            </ul>
+            <p>{{text7}}</p>
+            <h2>{{text8}}</h2>
+            <ul v-for="item in list2">
+                <li>{{item}}</li>
+            </ul>
+            <p class="importantText">{{text9}}</p>
+            <p>{{text10}}</p>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
